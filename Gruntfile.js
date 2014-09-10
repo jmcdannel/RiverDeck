@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
     handlebars: {
       compile: {
-        options: { 
+        options: {
           namespace: 'app.templates',
           processName: function(filePath) {
             return filePath.replace(/^www\/templates\//, '').replace(/\.hbs$/, '');
@@ -17,6 +17,23 @@ module.exports = function(grunt) {
         files: {
           'www/js/app/compiled-templates.js': ['www/templates/*.hbs']
         }
+      }
+    },
+
+    express: {
+        all: {
+            options: {
+                bases: ['./www/'],
+                port: 8080,
+                hostname: '0.0.0.0',
+                livereload: true
+            }
+        }
+    },
+
+    open: {
+      all: {
+        path: 'http://localhost:8080/index.dev.html'
       }
     },
 
@@ -49,23 +66,29 @@ module.exports = function(grunt) {
     watch: {
       css: {
           files: ['www/sass/**/*.scss'],
-          tasks: ['sass']
+          tasks: ['sass'],
+          options: {
+            livereload: true,
+          }
       },
       html: {
         files: ['www/templates/*.hbs'],
-        tasks: ['handlebars']
+        tasks: ['handlebars'],
+        options: {
+          livereload: true,
+        }
       }
     }
 
   });
-  
+
 
   //grunt.loadNpmTasks('grunt-contrib-requirejs');
   //grunt.loadNpmTasks('grunt-contrib-handlebars');
 
 
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('dev', ['handlebars', 'sass']);
+  grunt.registerTask('dev', ['handlebars', 'sass', 'express', 'open', 'watch']);
   grunt.registerTask('build', ['handlebars', 'sass', 'cssmin', 'requirejs']);
 
 };

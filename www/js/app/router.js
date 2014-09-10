@@ -1,28 +1,24 @@
 define([
   'backbone',
-  'modules/HelloWorld',
+  'modules/RiverDeck',
   'modules/Nav',
   'modules/Footer'
-], function(Backbone, HelloWorld, Nav, Footer){
+], function(Backbone, RiverDeck, Nav, Footer){
 
   var Router = Backbone.Router.extend({
 
     routes: {
-      ":language": "hello",
-      "": "hello"
+      "": "default"
     },
 
     initialize: function() {
       Nav.init();
-      var promise = Footer.init();
-      promise.done(function() {
-        app.log('footer is rendered');
-      });
+      Footer.init();
     },
 
-    hello: function(language) {
-      app.log('router:hello', language);
-      HelloWorld.init(language);
+    default: function() {
+      app.log('router:default');
+      RiverDeck.init();
     }
 
   });

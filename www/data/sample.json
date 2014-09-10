@@ -1,0 +1,113 @@
+{
+    "river": {
+        "name": "Main Payette",
+        "stats": {
+            "miles": "9",
+            "vertical": "80",
+            "gradient": "12",
+            "difficultyclass": "III"
+        },
+        "location": {
+            "state": "Idaho",
+            "country": "US",
+            "lat": "0",
+            "lng": "0",
+            "drainage": "Payette"
+        },
+        "access": {
+            "putin": {
+                "name": "Banks",
+                "directions": "",
+                "lat": "0",
+                "lng": "0"
+            },
+            "takeout": {
+                "name": "Banks",
+                "directions": "",
+                "lat": "0",
+                "lng": "0"
+            }
+        },
+        "flowData": {
+            "current": "2198",
+            "unit": "cfs",
+            "graph": "",
+            "flowStatus": "medium",
+            "datetime" : "9/10/14 12:00pm"
+        }
+    },
+    "userData": {
+        "log": [],
+        "currentYearTotal": "8",
+        "allTimeTotal": "124",
+        "photos": [],
+        "videos": [],
+        "activityFeed": [
+            {
+                "label": "Ben logged a trip with you.",
+                "actions": [
+                    {
+                        "label": "Duplicate his log entry."
+                    },
+                    {
+                        "label": "Link and existing log entry."
+                    }
+                ],
+                "thumbnail": "ben.png"
+            },
+            {
+                "label": "Five other RD users have run the Main Payette this month",
+                "actions": [
+                    {
+                        "label": "View my friends"
+                    },
+                    {
+                        "label": "View all"
+                    }
+                ],
+                "thumbnail": "activity-icon.png"
+            }
+        ],
+        "notes": [
+            {
+                "author": "RiverDeck",
+                "date": "5/5/14 12p",
+                "title": "",
+                "content": ""
+            },
+            {
+                "author": "Josh",
+                "date": "5/5/14 12p",
+                "title": "Log Deets",
+                "content": "Surfed in bennetts, swim in AMF"
+            },
+            {
+                "author": "Friend: Ben",
+                "date": "5/5/14 12p",
+                "title": "Nice run dude!",
+                "content": "Nice run dude!"
+            }
+        ]
+    },
+    "actions": [
+        {
+            "label": "Log",
+            "subActions": [
+                "Add",
+                "Last"
+            ]
+        },
+        {
+            "label": "Pics & Vids",
+            "subactions": [
+                "Add"
+            ]
+        },
+        {
+            "label": "Info"
+        },
+        {
+            "label": "Notes (3)"
+        }
+    ]
+}

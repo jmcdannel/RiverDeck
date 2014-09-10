@@ -1,0 +1,26 @@
+<article class="river-card">
+
+  <header class="river-card-header">
+    <h2 class="river-card-title">
+      {{river.name}}
+      <a href="#" class="icon-info btn-info"></a>
+      <a href="#" class="icon-eye btn-view-more"></a>
+    </h2>
+    {{>userstats}}
+    {{>riverstats}}
+  </header>
+
+  <section class="river-card-current-flow icon-stats {{river.flowData.flowStatus}}">
+    <strong>{{river.flowData.current}}</strong>{{river.flowData.unit}}
+    @  {{river.flowData.datetime}}
+  </section>
+
+  <section class="river-card-content">
+
+  </section>
+
+  <footer class="river-card-footer">
+    {{>rivercardnav}}
+  </footer>
+
+</article>
