@@ -1,0 +1,130 @@
+@inlcude mixins;
+
+.river-card {
+  border: 1px solid #666;
+  width: 21%;
+  margin: 2%;
+  @include rounded(5px);
+  min-height: 300px;
+  position: relative;
+}
+
+.river-card-header {
+  overflow: auto;
+  border-bottom: 1px solid #999;
+  padding: 0 5% 2% 5%;
+
+}
+.river-card-current-flow {
+  clear: both;
+  border-top: 1px solid #eee;
+  padding: 5%;
+  font-size: 11px;
+  strong {
+    font-size: 12px;
+  }
+
+  &.medium{
+    &:before, strong {
+      color: green;
+    }
+  }
+}
+
+.river-card-title {
+  margin: 0;
+  padding: 5% 0 1% 0;
+  font-size: 16px;
+  a {
+    color: #666;
+    visibility: hidden;
+    &:hover {
+      color: $red;
+      text-decoration: none;
+    }
+  }
+  .river-card:hover & a {
+    visibility: visible;
+  }
+  .btn-view-more {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    font-size: 24px;
+  }
+}
+
+.user-stats, .river-stats {
+  margin: 0;
+  padding: 0;
+}
+
+.stat {
+  display: inline;
+  list-style: none;
+  font-size: 12px;
+  color: #666;
+  padding: 1%;
+  @include rounded();
+  text-align: center;
+}
+
+.user-stats {
+  float: left;
+  width: 60%;
+
+}
+
+.river-stats {
+  float: right;
+  width: 40%;
+  text-align: right;
+  .stat:after { content: ', ' }
+  .stat:last-child:after { content: '' }
+}
+
+.stat-label, .stat-value {
+}
+
+.river-card-content {
+  min-height: 200px;
+}
+
+.river-card-footer {
+  border-top: 1px solid #999;
+  overflow: auto;
+}
+
+.river-card-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    float: left;
+    margin: 2% 0;
+    padding: 0;
+    width: 33.3%;
+  }
+}
+
+.btn-icon {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 9px;
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  &:before {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: $red;
+  }
+  &.current:before {
+    color: #666;
+  }
+}

@@ -5,7 +5,7 @@ body {
 h1 {
   color: $red;
 }
-a { 
+a {
   color: $red;
   text-decoration: none;
   transition: color 0.1s ease-in;
@@ -14,6 +14,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/*
 button {
   position: relative;
   display: inline-block;
@@ -43,3 +44,4 @@ button {
 button:hover {
   color: $red;
 }
+*/

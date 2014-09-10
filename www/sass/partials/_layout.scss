@@ -1,23 +1,25 @@
+@inlcude mixins;
 .container {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
 }
 
-header {
+#page-header {
   min-height: 40px;
 }
 
 #main {
-  min-height: 500px;
   background: #FFF;
   padding: 20px 0;
   position: relative;
+  width: 100%;
+  max-width: 1440px;
 }
 
-#main article {
-  width: 560px;
-}
-
-footer {
+#page-footer {
   min-height: 100px;
+}
+
+*, *:after, *:before {
+  @include box-sizing;
 }

@@ -1,5 +1,9 @@
-define(['router'], function(Router) {
-    
+define([
+  'router',
+  'utils/HandlebarHelpers',
+  'utils/HandlebarPartials'
+  ], function(Router) {
+
   function init() {
 
     var loggingEnabled = true;
