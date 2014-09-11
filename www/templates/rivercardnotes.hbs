@@ -1,0 +1,28 @@
+<div class="river-card-notes">
+  <button class="icon-plus">New Note</button>
+
+  <ol class="river-card-note-list">
+    {{#each userData.notes}}
+      <li class="river-card-note">
+        <div class="note-actions">
+          <a class="icon-link icon-pencil"></a>
+          <a class="icon-link icon-remove"></a>
+        </div>
+
+        <figure class="avatar avatar-small">
+          <img src="{{author.avatar}}" alt="{{author.name}}">
+          <figcaption>{{author.name}}
+        </figure>
+
+        <h4>{{title}}</h4>
+        <h5>{{date}}</h5>
+        <p>
+          {{content}}
+        </p>
+
+      </li>
+    {{/each}}
+  </ol>
+
+
+</div>

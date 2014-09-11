@@ -1,9 +1,24 @@
 @inlcude mixins;
 
+#river-deck {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.icon-link {
+  color: #666;
+  cursor: pointer;
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
 .river-card {
   border: 1px solid #666;
   width: 21%;
-  margin: 2%;
+  margin: 1%;
   @include rounded(5px);
   min-height: 300px;
   position: relative;
@@ -36,12 +51,8 @@
   padding: 5% 0 1% 0;
   font-size: 16px;
   a {
-    color: #666;
     visibility: hidden;
-    &:hover {
-      color: $red;
-      text-decoration: none;
-    }
+
   }
   .river-card:hover & a {
     visibility: visible;
@@ -86,8 +97,23 @@
 .stat-label, .stat-value {
 }
 
+.river-card-current-flow {
+  display: none;
+}
 .river-card-content {
-  min-height: 200px;
+  height: 280px;
+  overflow: auto;
+}
+
+[data-view="log"], [data-view="activity"] {
+  .river-card-content {
+    height: 240px;
+  }
+
+  .river-card-current-flow {
+    height: 40px;
+    display: block;
+  }
 }
 
 .river-card-footer {
@@ -127,4 +153,135 @@
   &.current:before {
     color: #666;
   }
+}
+
+.river-card-content {
+  padding: 0 5%;
+}
+
+//River Card Log
+.river-card-log {
+
+}
+
+.river-card-log-entries {
+  margin: 5% 0;
+  width: 100%;
+  font-size: 12px;
+  thead th {
+    border: 1px solid #EEE;
+    padding: 2%;
+
+      &.log-year {
+        background: #EEE;
+      }
+  }
+
+  tbody td {
+    border: 1px solid #EEE;
+
+    padding: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .stat {
+      display: inline-block;
+    }
+
+    &.notes {
+      max-width: 120px;
+    }
+  }
+
+  .date-cell {
+    position: relative;
+  }
+
+  .log-actions {
+    display: none;
+    &:hover a {
+      color: $red;
+    }
+  }
+
+  tr:hover .log-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.8);
+  }
+
+}
+
+.river-card-notes {
+  margin: 5% 0;
+}
+
+.river-card-note-list {
+  margin: 5% 0;
+  padding: 0;
+}
+.river-card-note {
+  margin: 2% 0;
+  padding: 0 0 0 60px;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+
+  .avatar {
+    position: absolute;
+    left: 5px;
+    top: 0;
+
+  }
+
+  h4, h5 { margin: 1% 0; }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .note-actions {
+    display: none;
+    a:hover {
+      color: $red;
+    }
+  }
+
+  &:hover .note-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: rgba(255,255,255,.8);
+    a {
+      display: block;
+      margin: 0 0 8px 0;
+    }
+  }
+
+}
+
+.avatar {
+    text-align: center;
+    &.avatar-small {
+      width: 50px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      figcaption {
+        font-size: 10px;
+        overflow: hidden;
+
+      }
+    }
+    img {
+      border: 1px solid $red;
+    }
 }

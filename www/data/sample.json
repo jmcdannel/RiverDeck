@@ -70,22 +70,37 @@
         ],
         "notes": [
             {
-                "author": "RiverDeck",
+                "author": {
+                  "name" : "River Deck",
+                  "id" : "rd",
+                  "type" : "system",
+                  "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
+                },
                 "date": "5/5/14 12p",
-                "title": "",
-                "content": ""
+                "title": "New Photos added for Main Payette",
+                "content": "Check this link: http://link.to.pics"
             },
             {
-                "author": "Josh",
+                "author": {
+                  "name" : "Josh",
+                  "id" : "josh",
+                  "type" : "owner",
+                  "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
+                },
                 "date": "5/5/14 12p",
                 "title": "Log Deets",
                 "content": "Surfed in bennetts, swim in AMF"
             },
             {
-                "author": "Friend: Ben",
+                "author": {
+                  "name" : "Ben",
+                  "id" : "ben",
+                  "type" : "friend",
+                  "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
+                },
                 "date": "5/5/14 12p",
                 "title": "Nice run dude!",
-                "content": "Nice run dude!"
+                "content": "Nice run dude! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. "
             }
         ]
     },

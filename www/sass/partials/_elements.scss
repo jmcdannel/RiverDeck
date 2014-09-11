@@ -14,7 +14,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-/*
+
 button {
   position: relative;
   display: inline-block;
@@ -22,14 +22,11 @@ button {
   font-size: 13px;
   font-weight: bold;
   color: $darkGrey;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.9);
   white-space: nowrap;
-  background-color: $lightBlue;
-  @include gradient(lighten($cream, 20%), $cream);
-  background-repeat: repeat-x;
   border-radius: 3px;
   border: 1px solid #d5d5d5;
   vertical-align: middle;
+  background: transparent;
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -40,8 +37,10 @@ button {
   -webkit-appearance: none;
   transition: color 0.1s ease-in;
   -webkit-transition: color 0.1s ease-in 0;
+  &:before {
+    padding-right: 5px;
+  }
 }
 button:hover {
   color: $red;
 }
-*/
