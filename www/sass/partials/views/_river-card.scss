@@ -1,0 +1,287 @@
+@inlcude mixins;
+
+#river-deck {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.icon-link {
+  color: #666;
+  cursor: pointer;
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+.river-card {
+  border: 1px solid #666;
+  width: 21%;
+  margin: 1%;
+  @include rounded(5px);
+  min-height: 300px;
+  position: relative;
+}
+
+.river-card-header {
+  overflow: auto;
+  border-bottom: 1px solid #999;
+  padding: 0 5% 2% 5%;
+
+}
+.river-card-current-flow {
+  clear: both;
+  border-top: 1px solid #eee;
+  padding: 5%;
+  font-size: 11px;
+  strong {
+    font-size: 12px;
+  }
+
+  &.medium{
+    &:before, strong {
+      color: green;
+    }
+  }
+}
+
+.river-card-title {
+  margin: 0;
+  padding: 5% 0 1% 0;
+  font-size: 16px;
+  a {
+    visibility: hidden;
+
+  }
+  .river-card:hover & a {
+    visibility: visible;
+  }
+  .btn-view-more {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    font-size: 24px;
+  }
+}
+
+.user-stats, .river-stats {
+  margin: 0;
+  padding: 0;
+}
+
+.stat {
+  display: inline;
+  list-style: none;
+  font-size: 12px;
+  color: #666;
+  padding: 1%;
+  @include rounded();
+  text-align: center;
+}
+
+.user-stats {
+  float: left;
+  width: 60%;
+
+}
+
+.river-stats {
+  float: right;
+  width: 40%;
+  text-align: right;
+  .stat:after { content: ', ' }
+  .stat:last-child:after { content: '' }
+}
+
+.stat-label, .stat-value {
+}
+
+.river-card-current-flow {
+  display: none;
+}
+.river-card-content {
+  height: 280px;
+  overflow: auto;
+}
+
+[data-view="log"], [data-view="activity"] {
+  .river-card-content {
+    height: 240px;
+  }
+
+  .river-card-current-flow {
+    height: 40px;
+    display: block;
+  }
+}
+
+.river-card-footer {
+  border-top: 1px solid #999;
+  overflow: auto;
+}
+
+.river-card-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    float: left;
+    margin: 2% 0;
+    padding: 0;
+    width: 33.3%;
+  }
+}
+
+.btn-icon {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 9px;
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  &:before {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: $red;
+  }
+  &.current:before {
+    color: #666;
+  }
+}
+
+.river-card-content {
+  padding: 0 5%;
+}
+
+//River Card Log
+.river-card-log {
+
+}
+
+.river-card-log-entries {
+  margin: 5% 0;
+  width: 100%;
+  font-size: 12px;
+  thead th {
+    border: 1px solid #EEE;
+    padding: 2%;
+
+      &.log-year {
+        background: #EEE;
+      }
+  }
+
+  tbody td {
+    border: 1px solid #EEE;
+
+    padding: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .stat {
+      display: inline-block;
+    }
+
+    &.notes {
+      max-width: 120px;
+    }
+  }
+
+  .date-cell {
+    position: relative;
+  }
+
+  .log-actions {
+    display: none;
+    &:hover a {
+      color: $red;
+    }
+  }
+
+  tr:hover .log-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.8);
+  }
+
+}
+
+.river-card-notes {
+  margin: 5% 0;
+}
+
+.river-card-note-list {
+  margin: 5% 0;
+  padding: 0;
+}
+.river-card-note {
+  margin: 2% 0;
+  padding: 0 0 0 60px;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+
+  .avatar {
+    position: absolute;
+    left: 5px;
+    top: 0;
+
+  }
+
+  h4, h5 { margin: 1% 0; }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .note-actions {
+    display: none;
+    a:hover {
+      color: $red;
+    }
+  }
+
+  &:hover .note-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: rgba(255,255,255,.8);
+    a {
+      display: block;
+      margin: 0 0 8px 0;
+    }
+  }
+
+}
+
+.avatar {
+    text-align: center;
+    &.avatar-small {
+      width: 50px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      figcaption {
+        font-size: 10px;
+        overflow: hidden;
+
+      }
+    }
+    img {
+      border: 1px solid $red;
+    }
+}
