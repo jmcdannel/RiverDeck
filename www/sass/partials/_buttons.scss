@@ -1,0 +1,59 @@
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: $darkGrey;
+  white-space: nowrap;
+  border-radius: 3px;
+  border: 1px solid #d5d5d5;
+  vertical-align: middle;
+  background: transparent;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in 0;
+  &:before {
+    padding-right: 5px;
+  }
+}
+button:hover {
+  color: $red;
+}
+
+.icon-link {
+  color: #666;
+  cursor: pointer;
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+.btn-icon {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 9px;
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  &:before {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: $red;
+  }
+  &.current:before {
+    color: #666;
+  }
+}

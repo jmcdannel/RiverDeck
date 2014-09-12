@@ -7,7 +7,7 @@ define([
     className: 'river-card-content',
 
     initView: function() {
-      this.$el.addClass('hide').attr('data-view', this.viewName);
+      this.$el.attr('data-view', this.viewName);
     },
 
     render: function() {

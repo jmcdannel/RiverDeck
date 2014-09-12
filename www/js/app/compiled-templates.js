@@ -37,6 +37,24 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<section class=\"log-entry\">\n  \n\n</section>\n";
   });
 
+this["app"]["templates"]["logentry"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "\n<form method=\"post\">\n\n  <div class=\"col-1\">\n    <label class=\"log-date-time\">\n      <span>Date / Time</span>\n      <input type=\"date\" id=\"log-date\" name=\"log-date\" value=\"";
+  if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" required>\n      <input type=\"time\" id=\"log-time\" name=\"log-time\" value=\"";
+  if (helper = helpers.time) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.time); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n    </label>\n\n    <label class=\"log-trips\">\n      <span># Trips</span>\n      <input type=\"number\" id=\"log-trips\" name=\"log-trips\" value=\"1\" required>\n    </label>\n\n    <label class=\"log-flow\">\n      <span>Flow</span>\n      <input type=\"text\" id=\"log-flow\" name=\"log-flow\">\n    </label>\n  </div>\n\n  <div class=\"col-2\">\n    <label class=\"log-run\">\n      <span>Run   <a href=\"#\" class=\"icon-plus\"> New Run</a></span>\n      <input type=\"text\" id=\"log-run\" name=\"log-run\" required>\n\n    </label>\n\n    <label class=\"log-notes\">\n      <span>Notes</span>\n      <textarea name=\"log-notes\" id=\"log-notes\"></textarea>\n    </label>\n\n\n    <label class=\"log-friends\">\n      <span>Tag Others</span>\n      <input type=\"text\" id=\"log-friends\" name=\"log-friends\">\n    </label>\n  </div>\n\n  <div class=\"actions\">\n    <button type=\"button\" class=\"btn-secondary\">Cancel</button>\n    <button type=\"submit\" class=\"btn-primary\">Submit</button>\n  </div>\n\n</form>\n";
+  return buffer;
+  });
+
 this["app"]["templates"]["nav"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -162,10 +180,40 @@ function program1(depth0,data) {
 this["app"]["templates"]["rivercardnav"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
   
+  var buffer = "", stack1, helper;
+  buffer += "\n    <li><button data-view=\"";
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" class=\"view-button btn-icon icon-";
+  if (helper = helpers.icon) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.icon); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.current), {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\">";
+  if (helper = helpers.label) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.label); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</button></li>\n    ";
+  return buffer;
+  }
+function program2(depth0,data) {
+  
+  
+  return "current";
+  }
 
-
-  return "<nav class=\"river-card-nav\">\n  <ul>\n    <li><button data-view=\"log\" class=\"view-button btn-icon icon-quill current\">Log</button></li>\n    <li><button data-view=\"flows\" class=\"view-button btn-icon icon-stats\">Flows</button></li>\n    <li><button data-view=\"notes\" class=\"view-button btn-icon icon-file\">Notes <span class=\"count\">(3)</span></button></li>\n    <!--<li><button class=\"btn-icon icon-image\">Photos <span class=\"count\">(6)</span></button></li>\n    <li><button class=\"btn-icon icon-play\">Videos <span class=\"count\">(1)</button></li>\n    <li><button class=\"btn-icon icon-feed \">Activity</button></li>-->\n  </ul>\n</nav>\n";
+  buffer += "<nav class=\"river-card-nav\">\n  <ul>\n    ";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.actions), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  </ul>\n</nav>\n";
+  return buffer;
   });
 
 this["app"]["templates"]["rivercardnotes"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
