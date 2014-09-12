@@ -1,0 +1,40 @@
+
+
+.river-card-info-list {
+  overflow: auto;
+  margin: 5% 0;
+  padding: 0;
+  border: solid #999;
+  border-width: 1px 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  .stat {
+    margin: 0;
+    padding: 4% 8%;
+    list-style: none;
+    float: left;
+    width: 50%;
+    background: #FAFAFA;;
+    text-align: left;
+    border: solid #999;
+    color: #999;
+    @include rounded(0);
+    &:nth-child(even) {
+      border-width: 0 1px 1px 1px;
+    }
+    &:nth-child(odd) {
+      border-width: 0 0 1px 1px;
+    }
+
+    h5 {
+      margin: 1% 0;
+    }
+    em {
+      color: #555;
+    }
+    .stat-value {
+      display: block;
+      margin: 1% 0;;
+    }
+  }
+}

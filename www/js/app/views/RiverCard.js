@@ -12,7 +12,7 @@ define([
     template: app.templates.rivercard,
 
     initialize: function() {
-      this.model.on('change', this.render, this);
+      //this.model.on('change:view', this.render, this);
       this._contentViews = {};
     },
 
@@ -25,7 +25,6 @@ define([
       var html = this.template(this.model.toJSON());
       this.$el.html(html);
 
-      var riverData = _.clone(this.model.get('river'));
       this.$content = $('.river-card-content-container', this.el);
       this.$viewButtons = $('.view-button', this.el);
 
@@ -34,8 +33,7 @@ define([
       this.renderContent(InfoView,  this.model);
       this.renderContent(FlowsView,  new FlowsModel());
 
-      this.$el.attr('data-view', riverData.view);
-      this._contentViews[riverData.view].$el.removeClass('hide');
+      this.$el.attr('data-view', this.model.get('view'));
 
       return this;
     },
@@ -49,11 +47,9 @@ define([
     },
 
     changeView: function(e) {
-      //TODO: backbonify (change model, handle via event)
       var newView = $(e.currentTarget).attr('data-view');
-      $('.river-card-content:visible').addClass('hide');
+      this.model.set('view', newView);
       this.$el.attr('data-view', newView);
-      this._contentViews[newView].$el.removeClass('hide');
       this.$viewButtons.removeClass('current');
       $(e.currentTarget).addClass('current');
     }
