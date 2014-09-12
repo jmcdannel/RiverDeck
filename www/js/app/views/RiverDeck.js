@@ -7,11 +7,8 @@ define([
 
     el: '#river-deck',
 
-    //template: app.templates.rivercard,
-
     initialize: function() {
       _(this).bindAll('add');
-      //this.model.on('change', this.render, this);
       this.cards = [];
       this.collection.each(this.add);
     },
@@ -22,8 +19,6 @@ define([
         className : 'river-card',
         model : cardModel
       });
-
-      app.log('add', cardModel, this);
 
       // And add it to the collection so that it's easy to reuse.
       this.cards.push(card);
