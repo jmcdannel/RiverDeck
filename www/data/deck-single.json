@@ -1,0 +1,142 @@
+[{
+    "river": {
+        "name": "Main Payette",
+        "view" : "flows",
+        "stats": {
+            "miles": "9",
+            "vertical": "80",
+            "gradient": "12",
+            "difficultyclass": "III"
+        },
+        "location": {
+            "state": "Idaho",
+            "country": "US",
+            "lat": "0",
+            "lng": "0",
+            "drainage": "Payette"
+        },
+        "access": {
+            "putin": {
+                "name": "Banks",
+                "directions": "",
+                "lat": "0",
+                "lng": "0"
+            },
+            "takeout": {
+                "name": "Beehive",
+                "directions": "",
+                "lat": "0",
+                "lng": "0"
+            }
+        },
+        "flowData": {
+            "current": "2198",
+            "unit": "cfs",
+            "graph": "",
+            "flowStatus": "medium",
+            "datetime" : "9/10/14 12:00pm"
+        },
+        "levels" : {
+          "low" : [500, 4000],
+          "medium" : [4000, 8000],
+          "high" : [8000, 2500]
+        }
+    },
+    "userData": {
+        "log": [
+          { "date" : "8/1", "notes" : " R5 with Ryan, Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R5 with Ryan, Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R4 with Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R3 with Ryan, Ben. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : "", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R5 with Ryan, Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : "", "runningTotals" : { "miles" : 192, "feet" : 1001 } }
+        ],
+        "currentYearTotal": "8",
+        "allTimeTotal": "124",
+        "photos": [],
+        "videos": [],
+        "activityFeed": [
+            {
+                "label": "Ben logged a trip with you.",
+                "actions": [
+                    {
+                        "label": "Duplicate his log entry."
+                    },
+                    {
+                        "label": "Link and existing log entry."
+                    }
+                ],
+                "thumbnail": "ben.png"
+            },
+            {
+                "label": "Five other RD users have run the Main Payette this month",
+                "actions": [
+                    {
+                        "label": "View my friends"
+                    },
+                    {
+                        "label": "View all"
+                    }
+                ],
+                "thumbnail": "activity-icon.png"
+            }
+        ],
+        "notes": [
+            {
+                "author": {
+                  "name" : "RiverDeck",
+                  "id" : "rd",
+                  "type" : "system",
+                  "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
+                },
+                "date": "5/5/14 12p",
+                "title": "New Photos added for Main Payette",
+                "content": "Check this link: http://link.to.pics"
+            },
+            {
+                "author": {
+                  "name" : "Josh",
+                  "id" : "josh",
+                  "type" : "owner",
+                  "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
+                },
+                "date": "5/5/14 12p",
+                "title": "Log Deets",
+                "content": "Surfed in bennetts, swim in AMF"
+            },
+            {
+                "author": {
+                  "name" : "Ben",
+                  "id" : "ben",
+                  "type" : "friend",
+                  "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
+                },
+                "date": "5/5/14 12p",
+                "title": "Nice run dude!",
+                "content": "Nice run dude! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. "
+            }
+        ]
+    },
+    "actions": [
+        {
+            "label": "Log",
+            "subActions": [
+                "Add",
+                "Last"
+            ]
+        },
+        {
+            "label": "Pics & Vids",
+            "subactions": [
+                "Add"
+            ]
+        },
+        {
+            "label": "Info"
+        },
+        {
+            "label": "Notes (3)"
+        }
+    ]
+}]

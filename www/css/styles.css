@@ -275,6 +275,9 @@ button:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.hide {
+  display: none; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?2f0moc");
@@ -484,6 +487,10 @@ button:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
   text-align: center; }
+  .stat em {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-style: normal; }
 
 .user-stats {
   float: left;
@@ -505,9 +512,13 @@ button:hover {
   height: 280px;
   overflow: auto; }
 
-[data-view="log"] .river-card-content, [data-view="activity"] .river-card-content {
+[data-view="log"] .river-card-content,
+[data-view="activity"] .river-card-content,
+[data-view="flows"] .river-card-content {
   height: 240px; }
-[data-view="log"] .river-card-current-flow, [data-view="activity"] .river-card-current-flow {
+[data-view="log"] .river-card-current-flow,
+[data-view="activity"] .river-card-current-flow,
+[data-view="flows"] .river-card-current-flow {
   height: 40px;
   display: block; }
 
@@ -628,3 +639,46 @@ button:hover {
       overflow: hidden; }
   .avatar img {
     border: 1px solid #f24c27; }
+
+.river-card-flows {
+  margin: 5% 0;
+  width: 100%; }
+
+.river-card-flow-graph {
+  width: 90%;
+  height: 200px; }
+
+.river-card-info-list {
+  overflow: auto;
+  margin: 5% 0;
+  padding: 0;
+  border: solid #999;
+  border-width: 1px 0 0 0;
+  display: flex;
+  flex-flow: row wrap; }
+  .river-card-info-list .stat {
+    margin: 0;
+    padding: 4% 8%;
+    list-style: none;
+    float: left;
+    width: 50%;
+    background: #FAFAFA;
+    text-align: left;
+    border: solid #999;
+    color: #999;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .river-card-info-list .stat:nth-child(even) {
+      border-width: 0 1px 1px 1px; }
+    .river-card-info-list .stat:nth-child(odd) {
+      border-width: 0 0 1px 1px; }
+    .river-card-info-list .stat h5 {
+      margin: 1% 0; }
+    .river-card-info-list .stat em {
+      color: #555; }
+    .river-card-info-list .stat .stat-value {
+      display: block;
+      margin: 1% 0; }

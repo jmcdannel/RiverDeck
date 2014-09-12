@@ -35,6 +35,11 @@
             "graph": "",
             "flowStatus": "medium",
             "datetime" : "9/10/14 12:00pm"
+        },
+        "levels" : {
+          "low" : [500, 4000],
+          "medium" : [4000, 8000],
+          "high" : [8000, 2500]
         }
     },
     "userData": {
@@ -152,7 +157,7 @@
                 "lng": "0"
             },
             "takeout": {
-                "name": "Banks",
+                "name": "Beehive",
                 "directions": "",
                 "lat": "0",
                 "lng": "0"
@@ -164,6 +169,11 @@
             "graph": "",
             "flowStatus": "medium",
             "datetime" : "9/10/14 12:00pm"
+        },
+        "levels" : {
+          "low" : [500, 4000],
+          "medium" : [4000, 8000],
+          "high" : [8000, 2500]
         }
     },
     "userData": {
@@ -289,7 +299,7 @@
                 "lng": "0"
             },
             "takeout": {
-                "name": "Banks",
+                "name": "Beehive",
                 "directions": "",
                 "lat": "0",
                 "lng": "0"
@@ -301,6 +311,11 @@
             "graph": "",
             "flowStatus": "medium",
             "datetime" : "9/10/14 12:00pm"
+        },
+        "levels" : {
+          "low" : [500, 4000],
+          "medium" : [4000, 8000],
+          "high" : [8000, 2500]
         }
     },
     "userData": {
@@ -396,7 +411,7 @@
 {
     "river": {
         "name": "Main Payette",
-        "view" : "info",
+        "view" : "flows",
         "stats": {
             "miles": "9",
             "vertical": "80",
@@ -418,7 +433,7 @@
                 "lng": "0"
             },
             "takeout": {
-                "name": "Banks",
+                "name": "Beehive",
                 "directions": "",
                 "lat": "0",
                 "lng": "0"
@@ -430,6 +445,11 @@
             "graph": "",
             "flowStatus": "medium",
             "datetime" : "9/10/14 12:00pm"
+        },
+        "levels" : {
+          "low" : [500, 4000],
+          "medium" : [4000, 8000],
+          "high" : [8000, 2500]
         }
     },
     "userData": {
