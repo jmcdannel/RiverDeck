@@ -3,8 +3,9 @@ define([
   'views/RiverCardLog',
   'views/RiverCardFlows',
   'views/RiverCardNotes',
-  'views/RiverCardInfo'
-  ], function(Backbone, LogView, FlowsView, NotesView, InfoView) {
+  'views/RiverCardInfo',
+  'models/Flows'
+  ], function(Backbone, LogView, FlowsView, NotesView, InfoView, FlowsModel) {
 
   return Backbone.View.extend({
 
@@ -12,6 +13,11 @@ define([
 
     initialize: function() {
       this.model.on('change', this.render, this);
+      this._contentViews = {};
+    },
+
+    events: {
+      'click .view-button': 'changeView',
     },
 
     render: function() {
@@ -20,51 +26,36 @@ define([
       this.$el.html(html);
 
       var riverData = _.clone(this.model.get('river'));
+      this.$content = $('.river-card-content-container', this.el);
+      this.$viewButtons = $('.view-button', this.el);
 
-
-      switch(riverData.view) {
-        case 'log' :
-          this.renderLog();
-          break;
-        case 'notes' :
-          this.renderNotes();
-          break;
-        case 'info' :
-          this.renderInfo();
-          break;
-        case 'flows' :
-          this.renderFlows();
-          break;
-        default:
-          this.renderLog();
-          break;
-      }
+      this.renderContent(LogView, this.model);
+      this.renderContent(NotesView, this.model);
+      this.renderContent(InfoView,  this.model);
+      this.renderContent(FlowsView,  new FlowsModel());
 
       this.$el.attr('data-view', riverData.view);
+      this._contentViews[riverData.view].$el.removeClass('hide');
 
       return this;
     },
 
-    renderLog: function() {
-      this.renderContent(LogView);
+    renderContent: function(View, model) {
+      var that = this;
+      var contentView = new View({ model: model });
+      that.$content.append(contentView.render().$el);
+      contentView.$el.attr('data-view', contentView.viewName);
+      this._contentViews[contentView.viewName] = contentView;
     },
 
-    renderNotes: function() {
-      this.renderContent(NotesView);
-    },
-
-    renderFlows: function() {
-      this.renderContent(FlowsView);
-    },
-
-    renderInfo: function() {
-      this.renderContent(InfoView);
-    },
-
-    renderContent: function(View) {
-      var contentView = new View({ model: this.model });
-      contentView.setElement($('.river-card-content', this.el));
-      contentView.render();
+    changeView: function(e) {
+      //TODO: backbonify (change model, handle via event)
+      var newView = $(e.currentTarget).attr('data-view');
+      $('.river-card-content:visible').addClass('hide');
+      this.$el.attr('data-view', newView);
+      this._contentViews[newView].$el.removeClass('hide');
+      this.$viewButtons.removeClass('current');
+      $(e.currentTarget).addClass('current');
     }
 
   });

@@ -1,18 +1,15 @@
-define(['backbone'], function(Backbone) {
+define([
+  'backbone',
+  'views/RiverCardContent'
+  ], function(Backbone, RiverCardContent) {
 
-  return Backbone.View.extend({
+  return RiverCardContent.extend({
 
     template: app.templates.rivercardlog,
 
     initialize: function() {
       this.model.on('change', this.render, this);
-    },
-
-    render: function() {
-
-      var html = this.template(this.model.toJSON());
-      this.$el.html(html);
-
+      this.viewName = 'log';
     }
 
   });

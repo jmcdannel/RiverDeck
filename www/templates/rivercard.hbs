@@ -1,7 +1,7 @@
 <header class="river-card-header">
   <h2 class="river-card-title">
     {{river.name}}
-    <a href="#" class="icon-link icon-info btn-info"></a>
+    <a href="#" data-view="info" class="view-button icon-link icon-info btn-info"></a>
     <a href="#" class="icon-link icon-eye btn-view-more"></a>
   </h2>
   {{>userstats}}
@@ -13,7 +13,7 @@
   @  {{river.flowData.datetime}}
 </section>
 
-<section class="river-card-content">
+<section class="river-card-content-container">
 
 </section>
 

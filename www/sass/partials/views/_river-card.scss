@@ -78,6 +78,12 @@
   padding: 1%;
   @include rounded();
   text-align: center;
+  em {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-style: normal;
+
+  }
 }
 
 .user-stats {
@@ -100,21 +106,43 @@
 .river-card-current-flow {
   display: none;
 }
-.river-card-content {
+.river-card-content-container {
   height: 280px;
   overflow: auto;
 }
 
-[data-view="log"], [data-view="activity"] {
-  .river-card-content {
-    height: 240px;
+.river-card-content: {
+  display: none;
+}
+
+.river-card {
+  &[data-view="log"] {
+    .river-card-content[data-view="log"] {
+      display: block;
+    }
   }
 
-  .river-card-current-flow {
-    height: 40px;
-    display: block;
+  &[data-view="log"],
+  &[data-view="activity"] ,
+  &[data-view="flows"] {
+    .river-card-content-container {
+      height: 240px;
+    }
+
+    .river-card-current-flow {
+      height: 40px;
+      display: block;
+    }
   }
+
 }
+[data-view="activity"],
+[data-view="notes"],
+[data-view="info"],
+[data-view="flows"] {
+}
+
+
 
 .river-card-footer {
   border-top: 1px solid #999;
@@ -160,9 +188,6 @@
 }
 
 //River Card Log
-.river-card-log {
-
-}
 
 .river-card-log-entries {
   margin: 5% 0;
@@ -216,7 +241,7 @@
 
 }
 
-.river-card-notes {
+.river-card-content[data-view="notes"] {
   margin: 5% 0;
 }
 
@@ -284,4 +309,52 @@
     img {
       border: 1px solid $red;
     }
+}
+
+.river-card-flows {
+  margin: 5% 0;
+  width: 100%;
+}
+.river-card-flow-graph {
+  width: 90%;
+  height: 200px;
+}
+
+.river-card-info-list {
+  overflow: auto;
+  margin: 5% 0;
+  padding: 0;
+  border: solid #999;
+  border-width: 1px 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  .stat {
+    margin: 0;
+    padding: 4% 8%;
+    list-style: none;
+    float: left;
+    width: 50%;
+    background: #FAFAFA;;
+    text-align: left;
+    border: solid #999;
+    color: #999;
+    @include rounded(0);
+    &:nth-child(even) {
+      border-width: 0 1px 1px 1px;
+    }
+    &:nth-child(odd) {
+      border-width: 0 0 1px 1px;
+    }
+
+    h5 {
+      margin: 1% 0;
+    }
+    em {
+      color: #555;
+    }
+    .stat-value {
+      display: block;
+      margin: 1% 0;;
+    }
+  }
 }

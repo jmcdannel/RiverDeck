@@ -23,3 +23,7 @@
 *, *:after, *:before {
   @include box-sizing;
 }
+
+.hide {
+  display: none;
+}
