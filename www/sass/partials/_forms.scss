@@ -1,0 +1,46 @@
+form {
+
+  label {
+    margin: 0 0 15px 0;
+    display: block;
+    span {
+      color: #FFF;
+      display: block;
+        margin: 0 0 2px 0;
+      a {
+        float: right;
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+
+  input, textarea {
+    @include rounded();
+    padding: 5px;
+    border: 0;
+  }
+
+  .col-1 {
+    width: 45%;
+    margin: 0 5% 0 0;
+    float: left;
+  }
+
+  .col-2 {
+    width: 45%;
+    float: left;
+  }
+
+  .actions {
+    clear: both;
+    text-align: right;
+  }
+
+  button {
+    color: #FFF;
+    &.btn-secondary {
+      color: #999;
+    }
+  }
+}

@@ -284,6 +284,40 @@ a:hover {
 .hide {
   display: none; }
 
+form label {
+  margin: 0 0 15px 0;
+  display: block; }
+  form label span {
+    color: #FFF;
+    display: block;
+    margin: 0 0 2px 0; }
+    form label span a {
+      float: right;
+      display: block;
+      font-size: 12px; }
+form input, form textarea {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  padding: 5px;
+  border: 0; }
+form .col-1 {
+  width: 45%;
+  margin: 0 5% 0 0;
+  float: left; }
+form .col-2 {
+  width: 45%;
+  float: left; }
+form .actions {
+  clear: both;
+  text-align: right; }
+form button {
+  color: #FFF; }
+  form button.btn-secondary {
+    color: #999; }
+
 button {
   position: relative;
   display: inline-block;
@@ -691,37 +725,12 @@ button:hover {
 
 #log-entry {
   background: #444;
-  box-shadow: inset 0px 0px 14px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 32px 0px rgba(0, 0, 0, 0.5);
   padding: 50px 100px; }
-  #log-entry label {
-    margin: 0 0 15px 0;
-    display: block; }
-    #log-entry label span {
-      color: #FFF;
-      display: block;
-      margin: 0 0 2px 0; }
-      #log-entry label span a {
-        float: right;
-        display: block;
-        font-size: 12px; }
-  #log-entry input, #log-entry textarea {
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-    padding: 5px;
-    border: 0; }
   #log-entry .col-1 {
-    width: 30%;
-    margin: 0 5% 0 0;
-    float: left; }
+    width: 30%; }
   #log-entry .col-2 {
-    width: 65%;
-    float: left; }
-  #log-entry .actions {
-    clear: both;
-    text-align: right; }
+    width: 65%; }
   #log-entry .log-trips input {
     width: 40px; }
   #log-entry .log-flow input {
@@ -733,7 +742,8 @@ button:hover {
     height: 50px; }
   #log-entry .log-friends input {
     width: 100%; }
-  #log-entry button {
-    color: #FFF; }
-    #log-entry button.btn-secondary {
-      color: #999; }
+
+#run-form {
+  background: #444;
+  box-shadow: inset 0px 0px 32px 0px rgba(0, 0, 0, 0.5);
+  padding: 50px 100px; }
