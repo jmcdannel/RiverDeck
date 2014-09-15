@@ -21,7 +21,7 @@ define([
     default: function() {
       app.log('router:default');
       RiverDeck.init();
-      //LogEntry.init();
+      LogEntry.init();
       RunManager.init();
     }
 
