@@ -1,4 +1,5 @@
 [{
+    "view" : "log",
     "river": {
         "name": "Main Payette",
         "view" : "notes",
@@ -113,26 +114,24 @@
     "actions": [
         {
             "label": "Log",
-            "subActions": [
-                "Add",
-                "Last"
-            ]
+            "icon": "quill",
+            "name" : "log",
+            "current" : true
         },
         {
-            "label": "Pics & Vids",
-            "subactions": [
-                "Add"
-            ]
+            "label": "Flows",
+            "name" : "flows",
+            "icon": "stats"
         },
         {
-            "label": "Info"
-        },
-        {
-            "label": "Notes (3)"
+            "label": "Notes (3)",
+            "name" : "notes",
+            "icon": "file"
         }
     ]
 },
 {
+    "view" : "log",
     "river": {
         "name": "Main Payette",
         "view" : "log",
@@ -255,26 +254,24 @@
     "actions": [
         {
             "label": "Log",
-            "subActions": [
-                "Add",
-                "Last"
-            ]
+            "icon": "quill",
+            "name" : "log",
+            "current" : true
         },
         {
-            "label": "Pics & Vids",
-            "subactions": [
-                "Add"
-            ]
+            "label": "Flows",
+            "name" : "flows",
+            "icon": "stats"
         },
         {
-            "label": "Info"
-        },
-        {
-            "label": "Notes (3)"
+            "label": "Notes (3)",
+            "name" : "notes",
+            "icon": "file"
         }
     ]
 },
 {
+    "view" : "log",
     "river": {
         "name": "Main Payette",
         "view" : "flows",
@@ -389,26 +386,24 @@
     "actions": [
         {
             "label": "Log",
-            "subActions": [
-                "Add",
-                "Last"
-            ]
+            "icon": "quill",
+            "name" : "log",
+            "current" : true
         },
         {
-            "label": "Pics & Vids",
-            "subactions": [
-                "Add"
-            ]
+            "label": "Flows",
+            "name" : "flows",
+            "icon": "stats"
         },
         {
-            "label": "Info"
-        },
-        {
-            "label": "Notes (3)"
+            "label": "Notes (3)",
+            "name" : "notes",
+            "icon": "file"
         }
     ]
 },
 {
+    "view" : "flows",
     "river": {
         "name": "Main Payette",
         "view" : "flows",
@@ -523,22 +518,19 @@
     "actions": [
         {
             "label": "Log",
-            "subActions": [
-                "Add",
-                "Last"
-            ]
+            "icon": "quill",
+            "name" : "log",
+            "current" : true
         },
         {
-            "label": "Pics & Vids",
-            "subactions": [
-                "Add"
-            ]
+            "label": "Flows",
+            "name" : "flows",
+            "icon": "stats"
         },
         {
-            "label": "Info"
-        },
-        {
-            "label": "Notes (3)"
+            "label": "Notes (3)",
+            "name" : "notes",
+            "icon": "file"
         }
     ]
 }]

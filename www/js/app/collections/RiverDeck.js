@@ -5,7 +5,7 @@ define([
 
   return Backbone.Collection.extend({
     model : _riverCardModel,
-    url : '/data/deck-single.json'
+    url : '/data/deck.json'
   });
 
 });
