@@ -1,35 +1,6 @@
-form {
-
+/*form {
   label {
-    margin: 0 0 15px 0;
-    display: block;
-    span {
-      color: #FFF;
-      display: block;
-        margin: 0 0 2px 0;
-      a {
-        float: right;
-        display: block;
-        font-size: 12px;
-      }
-    }
-  }
-
-  input, textarea {
-    @include rounded();
-    padding: 5px;
-    border: 0;
-  }
-
-  .col-1 {
-    width: 45%;
-    margin: 0 5% 0 0;
-    float: left;
-  }
-
-  .col-2 {
-    width: 45%;
-    float: left;
+    color: #FFF;
   }
 
   .actions {
@@ -43,4 +14,22 @@ form {
       color: #999;
     }
   }
+}
+*/
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea {
+  @include radius($input-border-radius);
 }

@@ -1,143 +1,188 @@
 <form method="post">
 
-  <label class="run-name">
-    <span>Run Name</span>
-    <input type="text" id="run-name" name="run-name" value="" required>
-  </label>
+  <div class="row">
 
-  <label class="run-aliases">
-    <span>Aliases</span>
-    <input list="drainages" id="run-aliases" name="run-aliases" value="" required>
-    <datalist id="drainages">
-      <option value="Salmon">Idaho: Salmon</option>
-      <option value="Snake">Idaho: Snake</option>
-      <option value="Clearwater">Idaho: Clearwater</option>
-      <option value="St. Joe">Idaho: St. Joe</option>
-      <option value="Bruneau">Idaho: Bruneau</option>
-      <option value="Owyhee">Idaho: Owyhee</option>
-      <option value="Owyhee">Oregon: Owyhee</option>
-  </label>
-
-  <label class="run-location">
-    <span>State / Country</span>
-    <select id="run-country" name="run-country">
-      <option value="US">United States</option>
-    </select>
-    <select id="run-state" name="run-state">
-      <option value="ID">Idaho</option>
-    </select>
-  </label>
-
-  <label class="run-drainage">
-    <span>Drainage / Main River</span>
-    <input type="" id="run-drainage" name="run-drainage" value="" required>
-  </label>
-
-  <label class="">
-    <span>Put In</span>
-    <input type="" id="run-" name="run-" value="" required>
-    <a href="#">Set Location</a>
-    <a href="#">Provide Directions / Notes</a>
-  </label>
-
-  <label class="">
-    <span>Put In Directions</span>
-    <input type="" id="run-" name="run-" value="" required>
-  </label>
-
-  <label class="">
-    <span>Take Out</span>
-    <input type="" id="run-" name="run-" value="" required>
-    <a href="#">Set Location</a>
-    <a href="#">Provide Directions / Notes</a>
-  </label>
-
-  <label class="">
-    <span>Take Out Directions</span>
-    <input type="" id="run-" name="run-" value="" required>
-  </label>
-
-  <fieldset>
-    <legend>River Stats</legend>
-
-    <label class="">
-      <span>Miles</span>
-      <input type="" id="run-" name="run-" value="" required>
-    </label>
-
-    <label class="">
-      <span>Vertical Drop</span>
-      <input type="" id="run-" name="run-" value="" required>
-    </label>
-
-    <label class="">
-      <span>Difficulty</span>
-      <input type="" id="run-" name="run-" value="" required>
-    </label>
-
-  </fieldset>
-
-  <label class="">
-    <span>Location (lat/lng)</span>
-    <input type="" id="run-" name="run-" value="" required>
-    <input type="" id="run-" name="run-" value="" required>
-  </label>
-
-  <label class="">
-    <span>USGS ID</span>
-    <input type="" id="run-" name="run-" value="" required>
-  </label>
-
-  <fieldset>
-    <legend>Flow Thresholds</legend>
-
-    <div class="flow-threshold-low">
-      <label class="">
-        <span></span>
-        <input type="" id="run-" name="run-" value="" required>
-      </label>
-      -
-      <label class="">
-        <span></span>
-        <input type="" id="run-" name="run-" value="" required>
+    <div class="large-12 columns">
+      <label class="run-name">
+        Run Name
+        <input type="text" id="run-name" name="run-name" value="" required>
       </label>
     </div>
+  </div>
 
-    <div class="flow-threshold-medium">
-      <label class="">
-        <span></span>
-        <input type="" id="run-" name="run-" value="" required>
+  <div class="row">
+    <div class="large-4 columns">
+      <h2> Run Location </h2>
+
+      <div class="row">
+
+        <label class="large-6 columns">
+          Country
+          <select id="run-country" name="run-country" class="radius">
+            <option value="US">United States</option>
+          </select>
+        </label>
+        <label class="large-6 columns">
+          State
+          <select id="run-state" name="run-state" class="radius">
+            <option value="ID">Idaho</option>
+          </select>
+        </labe>
+      </div>
+
+      <div class="row">
+        <label class="large-6 columns">
+           Latitude
+          <input type="text" id="run-" name="run-" value="" placeholder="Decimal Format">
+        </label>
+        <label class="large-6 columns">
+           Longitue
+          <input type="text" id="run-" name="run-" value="" placeholder="Decimal Format">
+        </label>
+      </div>
+
+      <label>
+        Drainage / Main River
+        <input type="text" id="run-drainage" name="run-drainage" value="" placeholder="ex: Salmon, Payette">
       </label>
-      -
-      <label class="">
-        <span></span>
-        <input type="" id="run-" name="run-" value="" required>
+
+
+      <label>
+        Put In
+        <input type="text" id="run-" name="run-" value="">
+      </label>
+
+      <label class="hide">
+        Put In Directions
+        <input type="" id="run-" name="run-" value="">
+      </label>
+
+      <label>
+        Take Out
+        <input type="text" id="run-" name="run-" value="">
+      </label>
+
+      <label class="hide">
+        Take Out Directions
+        <input type="" id="run-" name="run-" value="">
+      </label>
+
+    </div>
+    <div class="large-4 columns">
+      <h2> Run Statistics </h2>
+
+      <div class="row">
+        <div class="large-4 columns">
+          <label>
+            Miles
+            <input type="number" id="run-" name="run-" value="" size="4" required>
+          </label>
+        </div>
+        <div class="large-4 columns">
+          <label>
+            Vertical Drop
+            <input type="number" id="run-" name="run-" value="" size="5" required>
+          </label>
+        </div>
+        <div class="large-4 columns">
+          <label>
+            Difficulty
+            <input type="text" id="run-" name="run-" value="" size="4" required>
+          </label>
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Flow Thresholds</legend>
+
+        <div class="flow-threshold-low row">
+          <h5>Low Range</h5>
+          <div class="large-5 columns">
+            <label class="">
+              <input type="text" id="run-" name="run-" value="" placeholder="Min">
+            </label>
+          </div>
+          <div class="large-2 columns text-center">
+            -
+          </div>
+          <div class="large-5 columns">
+            <label class="">
+              <input type="text" id="run-" name="run-" value="" placeholder="Max">
+            </label>
+          </div>
+        </div>
+
+        <div class="flow-threshold-medium row">
+          <h5>Medium Range</h5>
+          <div class="large-5 columns">
+            <label class="">
+              <input type="text" id="run-" name="run-" value="" placeholder="Min">
+            </label>
+          </div>
+          <div class="large-2 columns text-center">
+            -
+          </div>
+          <div class="large-5 columns">
+            <label class="">
+              <input type="text" id="run-" name="run-" value="" placeholder="Max">
+            </label>
+          </div>
+        </div>
+
+        <div class="flow-threshold-hign row">
+          <h5>High Range</h5>
+          <div class="large-5 columns">
+            <label class="">
+              <input type="text" id="run-" name="run-" value="" placeholder="Min">
+            </label>
+          </div>
+          <div class="large-2 columns text-center">
+            -
+          </div>
+          <div class="large-5 columns">
+            <label class="">
+              <input type="text" id="run-" name="run-" value="" placeholder="Max">
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+
+    </div>
+    <div class="large-4 columns">
+      <h2> Run Information </h2>
+      <label class="run-aliases">
+        Aliases
+        <input type="text" list="drainages" id="run-aliases" name="run-aliases" value="" required>
+        <datalist id="drainages">
+          <option value="Salmon">Idaho: Salmon</option>
+          <option value="Snake">Idaho: Snake</option>
+          <option value="Clearwater">Idaho: Clearwater</option>
+          <option value="St. Joe">Idaho: St. Joe</option>
+          <option value="Bruneau">Idaho: Bruneau</option>
+          <option value="Owyhee">Idaho: Owyhee</option>
+          <option value="Owyhee">Oregon: Owyhee</option>
+        </datalist>
+      </label>
+
+      <label>
+        USGS ID
+        <input type="text" id="run-" name="run-" value="" required>
+      </label>
+
+      <label>
+        Description
+        <textarea rows="10"></textarea>
       </label>
     </div>
+  </div>
 
-    <div class="flow-threshold-hign">
-      <label class="">
-        <span></span>
-        <input type="" id="run-" name="run-" value="" required>
-      </label>
-      -
-      <label class="">
-        <span></span>
-        <input type="" id="run-" name="run-" value="" required>
-      </label>
+  <div class="row">
+    <div class="large-12 columns actions text-right">
+      <button type="button" class="button btn-secondary">Cancel</button>
+      <button type="submit" class="button btn-primary">Submit</button>
     </div>
-
-  </fieldset>
-
-
-  <label class="">
-    <span></span>
-    <input type="" id="run-" name="run-" value="" required>
-  </label>
-
-  <div class="actions">
-    <button type="button" class="btn-secondary">Cancel</button>
-    <button type="submit" class="btn-primary">Submit</button>
+  </div>
   </div>
 
 </form>

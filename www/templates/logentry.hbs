@@ -1,46 +1,61 @@
 
 <form method="post">
 
-  <div class="col-1">
-    <label class="log-date-time">
-      <span>Date / Time</span>
-      <input type="date" id="log-date" name="log-date" value="{{date}}" required>
-      <input type="time" id="log-time" name="log-time" value="{{time}}">
-    </label>
+  <div class="row">
 
-    <label class="log-trips">
-      <span># Trips</span>
-      <input type="number" id="log-trips" name="log-trips" value="1" required>
-    </label>
+    <div class="large-12 columns">
+      <label class="log-run">
+        Run
+        <a href="#" class="icon-plus"> New Run</a>
+        <input type="text" id="log-run" name="log-run" required>
+      </label>
 
-    <label class="log-flow">
-      <span>Flow</span>
-      <input type="text" id="log-flow" name="log-flow">
-    </label>
+      <div class="row">
+        <div class="large-3 columns">
+          <label class="log-date">
+            Date
+            <input type="date" id="log-date" name="log-date" value="{{date}}" required>
+          </label>
+        </div>
+        <div class="large-3 columns">
+          <label class="log-time">
+            Time
+            <input type="time" id="log-time" name="log-time" value="{{time}}">
+          </label>
+        </div>
+        <div class="large-3 columns">
+          <label class="log-trips">
+            <span># Trips</span>
+            <input type="number" id="log-trips" name="log-trips" value="1" required>
+          </label>
+        </div>
+        <div class="large-3 columns">
+          <label class="log-flow">
+            <span>Flow</span>
+            <input type="text" id="log-flow" name="log-flow">
+          </label>
+        </div>
+      </div>
+
+        <label class="log-notes">
+          <span>Notes</span>
+          <textarea name="log-notes" id="log-notes" rows="5"></textarea>
+        </label>
+
+
+        <label class="log-friends">
+          <span>Tag Others</span>
+          <input type="text" id="log-friends" name="log-friends">
+        </label>
+      </div>
+    </div>
   </div>
 
-  <div class="col-2">
-    <label class="log-run">
-      <span>Run   <a href="#" class="icon-plus"> New Run</a></span>
-      <input type="text" id="log-run" name="log-run" required>
-
-    </label>
-
-    <label class="log-notes">
-      <span>Notes</span>
-      <textarea name="log-notes" id="log-notes"></textarea>
-    </label>
-
-
-    <label class="log-friends">
-      <span>Tag Others</span>
-      <input type="text" id="log-friends" name="log-friends">
-    </label>
-  </div>
-
-  <div class="actions">
-    <button type="button" class="btn-secondary">Cancel</button>
-    <button type="submit" class="btn-primary">Submit</button>
+  <div class="row">
+    <div class="large-12 columns actions text-right">
+      <button type="button" class="button btn-secondary">Cancel</button>
+      <button type="submit" class="button btn-primary">Submit</button>
+    </div>
   </div>
 
 </form>
