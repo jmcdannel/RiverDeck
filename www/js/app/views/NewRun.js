@@ -13,6 +13,7 @@ define(['backbone'], function(Backbone) {
     },
 
     initialize: function() {
+      _(this).bindAll('submit_success', 'submit_fail');
       this.model.on('change', this.render, this);
     },
 
@@ -41,17 +42,21 @@ define(['backbone'], function(Backbone) {
         }
       };
 
+      app.log('data', data);
+
       var callbacks = {
-        success: submit_success,
-        error: submit_fail
+        success: this.submit_success,
+        error: this.submit_fail
       }
 
       this.model.save(data, callbacks);
 
     },
 
-    submit_success: function() {
-      app.log('run created', arguments);
+    submit_success: function(respoonse, run) {
+      app.log('run created', respoonse.id, arguments);
+      this.$el.remove();
+      app.router.navigate('/completerun/' + respoonse.id, {trigger: true});
     },
 
     submit_fail: function() {

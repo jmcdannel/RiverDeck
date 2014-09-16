@@ -11,7 +11,9 @@ define([
 
     routes: {
       "": "default",
-      "newrun/" : "newrun"
+      "newrun/" : "newrun",
+      "deck/" : "default",
+      "completerun/:id" : "completerun"
     },
 
     initialize: function() {
@@ -28,6 +30,10 @@ define([
 
     newrun: function() {
       RunManager.newrun();
+    },
+
+    completerun: function(runID) {
+      RunManager.completerun(runID);
     }
 
   });

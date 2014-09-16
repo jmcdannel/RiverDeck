@@ -6,6 +6,7 @@ var RiverRun = restful.model('RiverRun', Schema({
       name: { type: String, required: true },
       notes: { type: String, required: false },
       usgsID: { type: String },
+      aliases: { type: String },
       stats: {
         miles: { type: Number, required: true },
         vertical: { type: Number, required: true },
@@ -33,7 +34,6 @@ var RiverRun = restful.model('RiverRun', Schema({
         }
       },
       levels: {
-        low: {
           min: { type: Number },
           max: { type: Number },
           notes: String
