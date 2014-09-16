@@ -13,7 +13,10 @@
     "grunt-htmlhint": "*",
     "matchdep": "*",
     "grunt-contrib-handlebars": "^0.7.0",
-    "grunt-contrib-requirejs": "^0.4.3"
+    "grunt-contrib-requirejs": "^0.4.3",
+		"body-parser": "~1.0.1",
+		"express": "~4.0.0",
+		"mongoose": "~3.6.13"
   },
   "dependencies": {
     "jsonfile": "^2.0.0"
