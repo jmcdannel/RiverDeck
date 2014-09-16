@@ -1,13 +1,19 @@
 define([
   'models/RiverRun',
-  'views/RunForm'
-], function(RiverRunModel, RunFormView) {
+  'views/EditRun',
+  'views/NewRun',
+  'views/CompleteRun'
+], function(
+  RiverRunModel,
+  EditRunView,
+  NewRunView,
+  CompleteRunView) {
 
 
   function init() {
 
     var model = new RiverRunModel();
-    var view = new RunFormView({ model: model });
+    var view = new NewRunView({ model: model });
     view.render();
 
   }

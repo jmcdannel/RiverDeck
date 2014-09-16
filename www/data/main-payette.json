@@ -1,0 +1,36 @@
+{
+  "name": "Main Payette",
+  "notes": "",
+  "usugID": "",
+  "stats": {
+      "miles": "9",
+      "vertical": "80",
+      "difficulty": "III"
+  },
+  "location": {
+      "state": "Idaho",
+      "country": "US",
+      "lat": "0",
+      "lng": "0",
+      "drainage": "Payette"
+  },
+  "access": {
+      "putin": {
+          "name": "Banks",
+          "directions": "",
+          "lat": "0",
+          "lng": "0"
+      },
+      "takeout": {
+          "name": "Banks",
+          "directions": "",
+          "lat": "0",
+          "lng": "0"
+      }
+  },
+  "levels" : {
+    "low" : { "min" : 500, "max": 4000, "notes" : "" },
+    "medium" : { "min" : 4000, "max": 8000, "notes" : "" },
+    "high" : { "min" : 8000, "max": 25000, "notes" : "" }
+  }
+}
