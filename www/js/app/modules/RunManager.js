@@ -9,8 +9,7 @@ define([
   NewRunView,
   CompleteRunView) {
 
-
-  function init() {
+  function newrun() {
 
     var model = new RiverRunModel();
     var view = new NewRunView({ model: model });
@@ -18,7 +17,7 @@ define([
 
   }
 
-  return { init: init };
+  return { newrun: newrun };
 
 
 });

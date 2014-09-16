@@ -10,7 +10,8 @@ define([
   var Router = Backbone.Router.extend({
 
     routes: {
-      "": "default"
+      "": "default",
+      "newrun/" : "newrun"
     },
 
     initialize: function() {
@@ -22,7 +23,11 @@ define([
       app.log('router:default');
       RiverDeck.init();
       //LogEntry.init();
-      RunManager.init();
+      //RunManager.init();
+    },
+
+    newrun: function() {
+      RunManager.newrun();
     }
 
   });

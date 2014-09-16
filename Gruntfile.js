@@ -6,6 +6,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    concurrent: {
+      dev: {
+        tasks: ['exec', 'watch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+
     handlebars: {
       compile: {
         options: {
@@ -20,6 +29,10 @@ module.exports = function(grunt) {
       }
     },
 
+    exec: {
+      run: 'node app/server.js'
+    },
+    /*
     express: {
         all: {
             options: {
@@ -30,6 +43,7 @@ module.exports = function(grunt) {
             }
         }
     },
+    */
 
     open: {
       all: {
@@ -88,7 +102,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('dev', ['handlebars', 'sass', 'express', 'open', 'watch']);
+  grunt.registerTask('dev', ['handlebars', 'sass', 'open', 'concurrent:dev']);
   grunt.registerTask('build', ['handlebars', 'sass', 'cssmin', 'requirejs']);
 
 };
