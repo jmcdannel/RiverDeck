@@ -13,7 +13,7 @@ define(['backbone'], function(Backbone) {
     render: function() {
 
       var html = this.template(this.model.toJSON());
-      this.$el.html(html);
+      this.$el.html(html).removeClass('hide');
 
     }
 

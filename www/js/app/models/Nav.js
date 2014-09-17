@@ -7,7 +7,8 @@ define(['backbone'], function(Backbone) {
         {text: 'About', link: '#'},
         {text: 'Help', link: '#'},
         {text: 'My Deck', link: '#/'},
-        {text: 'New Run', link: '#/newrun/'}
+        {text: 'New Run', link: '#/newrun/'},
+        {text: 'Log Run', link: '#/logrun/'}
       ]
     }
 

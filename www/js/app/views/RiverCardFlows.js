@@ -30,6 +30,7 @@ define([
     },
 
     renderChart: function(model) {
+      app.log('renderChart', model.get('flows').length);
       var chartEl = $('.river-card-flow-graph', this.el);
       var chartCtx = chartEl.get(0).getContext("2d");
       var data = FlowHelpers.getChart('days', model.get('flows'));

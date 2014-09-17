@@ -31,11 +31,17 @@ define(['moment'], function() {
     var currentDay = "";
     var dayFlows = {};
     var day, date;
-    var data = defaultChartConfig;
+    //TO DO: figure out this is jacked up
+    var data = $.extend(defaultChartConfig, {});
+    data.labels = [];
+    data.datasets[0].data = [];
+    app.log('getChartDays', flows.length, data.labels.length, defaultChartConfig.labels.length);
+
     for(var idx = 0, max = flows.length; idx < max; idx++) {
       date = moment(flows[idx].time);
       day = date.format('M/D');
       if (day != currentDay) { //new day reached
+          app.log('label', day);
           data.labels.push(day);
           dayFlows[day] = [];
           currentDay = day;
@@ -46,6 +52,7 @@ define(['moment'], function() {
     _.each(data.labels, function(label) {
       data.datasets[0].data.push(getAverage(dayFlows[label]));
     });
+    app.log('data', data);
     return data;
   }
 

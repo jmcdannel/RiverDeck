@@ -300,9 +300,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<ul class=\"user-stats\">\n  <li class=\"stat\">\n    <label class=\"stat-label\">2014</label>\n    <strong class=\"stat-value\">"
+  buffer += "<ul class=\"user-stats\">\n  <li class=\"stat\">\n    <span class=\"stat-label\">2014</span>\n    <strong class=\"stat-value\">"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.userData)),stack1 == null || stack1 === false ? stack1 : stack1.currentYearTotal)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</strong>\n  </li>\n  <li class=\"stat\">\n    <label class=\"stat-label\">Life</label>\n    <strong class=\"stat-value\">"
+    + "</strong>\n  </li>\n  <li class=\"stat\">\n    <span class=\"stat-label\">Life</span>\n    <strong class=\"stat-value\">"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.userData)),stack1 == null || stack1 === false ? stack1 : stack1.allTimeTotal)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</strong>\n  </il>\n</ul>\n";
   return buffer;

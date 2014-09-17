@@ -7,3 +7,5 @@ node_modules
 .sass-cache
 
 www/css/styles.css
+
+www/css/styles.css.map
