@@ -20,11 +20,11 @@ define([
         }
     }
 
+    app.router = new Router();
     window.app = app;
 
 
 
-    var router = new Router();
     Backbone.history.start({ pushState: false, root: "/"});
 
   }

@@ -6,8 +6,9 @@ define(['backbone'], function(Backbone) {
       nav: [
         {text: 'About', link: '#'},
         {text: 'Help', link: '#'},
-        {text: 'GitHub', link: '#'},
-        {text: 'To Do', link: '#'}
+        {text: 'My Deck', link: '#/'},
+        {text: 'New Run', link: '#/newrun/'},
+        {text: 'Log Run', link: '#/logrun/'}
       ]
     }
 

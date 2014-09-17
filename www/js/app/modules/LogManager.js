@@ -3,9 +3,7 @@ define([
   'views/LogEntry'
 ], function(_model, _view) {
 
-  var deferred = new $.Deferred();
-
-  function init() {
+  function add() {
 
     var model = new _model();
     var view = new _view({ model: model });
@@ -13,6 +11,6 @@ define([
 
   }
 
-  return { init: init };
+  return { add: add };
 
 });

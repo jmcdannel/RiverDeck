@@ -36,8 +36,7 @@ define([
       this._rendered = true;
 
 
-      that.$el.empty();
-      app.log('RiverDeck.render', this);
+      this.$el.empty().removeClass('hide');
 
       // Render each Donut View and append them.
       _(this.cards).each(function(card) {
