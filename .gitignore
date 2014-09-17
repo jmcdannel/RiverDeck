@@ -4,6 +4,7 @@
 *.swp
 *.out
 node_modules
+www/.sass-cache
 .sass-cache
 
 www/css/styles.css
