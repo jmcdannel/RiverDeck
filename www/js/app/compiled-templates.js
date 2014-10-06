@@ -86,10 +86,10 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<nav class=\"container\">\n  ";
+  buffer += "<!--<nav class=\"container\">\n  ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.nav), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</nav>";
+  buffer += "\n</nav>-->\n<div class=\"fixed\">\n  <nav class=\"top-bar\" data-topbar role=\"navigation\">\n    <ul class=\"title-area\">\n      <li class=\"name\">\n        <h1><a href=\"#\"><em>River</em>Deck</a></h1>\n      </li>\n       <!-- Remove the class \"menu-icon\" to get rid of menu icon. Take out \"Menu\" to just have icon alone -->\n      <li class=\"toggle-topbar menu-icon\"><a href=\"#\"><span>Menu</span></a></li>\n    </ul>\n\n    <section class=\"top-bar-section\">\n      <!-- Right Nav Section -->\n      <ul class=\"right\">\n        <li><a href=\"#\">Help</a></li>\n        <li><a href=\"#\">About</a></li>\n        <!--<li class=\"has-dropdown\">\n          <a href=\"#\">My Account</a>\n          <ul class=\"dropdown\">\n            <li><a href=\"#\">My Profile</a></li>\n            <li><a href=\"#\">Other</a></li>\n          </ul>\n        </li>-->\n      </ul>\n\n      <!-- Left Nav Section -->\n      <ul class=\"left\">\n        <li class=\"has-form\">\n          <a href=\"/newrun/\" class=\"button\">+ Log Run</a>\n        </li>\n      </ul>\n    </section>\n  </nav>\n</div>\n";
   return buffer;
   });
 

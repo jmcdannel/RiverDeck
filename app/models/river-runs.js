@@ -34,6 +34,7 @@ var RiverRun = restful.model('RiverRun', Schema({
         }
       },
       levels: {
+        low: {
           min: { type: Number },
           max: { type: Number },
           notes: String

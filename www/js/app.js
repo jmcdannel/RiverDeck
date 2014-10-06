@@ -8,6 +8,7 @@ requirejs.config({
       chart: '../lib/Chart',
       moment: '../lib/moment',
       handlebars: '../lib/handlebars.runtime',
+      foundation: '../lib/foundation',
       templates : 'compiled-templates'
     },
 
@@ -35,7 +36,7 @@ requirejs.config({
          * (which in turn requires LoDash and jQuery)
          */
         main: {
-          deps: ['backbone', 'templates']
+          deps: ['backbone', 'templates', 'foundation']
         }
     },
     map: {

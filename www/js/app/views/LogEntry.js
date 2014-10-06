@@ -18,5 +18,5 @@ define(['backbone'], function(Backbone) {
     }
 
   });
-
+ 
 });

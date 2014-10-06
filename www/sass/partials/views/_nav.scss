@@ -1,4 +1,4 @@
-#page-header {
+/*#page-header {
   background: $darkBlue;
   border-bottom: 1px solid $lightBlue;
   min-height: 40px;
@@ -18,5 +18,15 @@
     content: '';
     display: block;
     clear: both;
+  }
+}
+*/
+
+.title-area .name h1 > a {
+  text-transform: lowercase;
+  text-style: italic; 
+  em {
+    text-transform: uppercase;
+    color: $red;
   }
 }
