@@ -1,29 +1,27 @@
 define([
-  'models/RiverCard',
-  'views/RiverCard'
-], function(_model, _view) {
+  'collections/RiverDeck',
+  'views/RiverDeck'
+], function(RiverDeckCollection, RiverDeckView) {
 
   var deferred = new $.Deferred();
 
   function init() {
-    app.log('module: RiverDeck', 'init');
-    var model = new _model();
-    model.fetch({ success: model_fetched, error: model_fail });
+
+    var rivers = new RiverDeckCollection();
+    rivers.fetch({
+      success: function(model, response, options) {
+        var deck = new RiverDeckView({ collection : rivers });
+        deck.render();
+        deferred.resolve();
+      },
+      error: function() {
+        app.log('module: RiverDeck', 'fail', arguments);
+      }
+    });
+
     return deferred.promise();
 
   }
-
-  function model_fetched(model, response, options) {
-    app.log('module: RiverDeck', 'model_fetched', model);
-    var view = new _view({ model: model });
-    view.render();
-    deferred.resolve();
-  }
-
-  function model_fail() {
-    app.log('module: RiverDeck', 'fail', arguments);
-  }
-
   return { init: init };
 
 });

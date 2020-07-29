@@ -1,0 +1,54 @@
+
+//River Card Log
+
+.river-card-log-entries {
+  margin: 5% 0;
+  width: 100%;
+  font-size: 12px;
+  thead th {
+    border: 1px solid #EEE;
+    padding: 2%;
+
+      &.log-year {
+        background: #EEE;
+      }
+  }
+
+  tbody td {
+    border: 1px solid #EEE;
+
+    padding: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .stat {
+      display: inline-block;
+    }
+
+    &.notes {
+      max-width: 120px;
+    }
+  }
+
+  .date-cell {
+    position: relative;
+  }
+
+  .log-actions {
+    display: none;
+    &:hover a {
+      color: $red;
+    }
+  }
+
+  tr:hover .log-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.8);
+  }
+
+}

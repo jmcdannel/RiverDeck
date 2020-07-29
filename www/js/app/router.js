@@ -1,9 +1,11 @@
 define([
   'backbone',
   'modules/RiverDeck',
+  'modules/LogEntry',
+  'modules/RunManager',
   'modules/Nav',
   'modules/Footer'
-], function(Backbone, RiverDeck, Nav, Footer){
+], function(Backbone, RiverDeck, LogEntry, RunManager, Nav, Footer){
 
   var Router = Backbone.Router.extend({
 
@@ -19,6 +21,8 @@ define([
     default: function() {
       app.log('router:default');
       RiverDeck.init();
+      //LogEntry.init();
+      RunManager.init();
     }
 
   });

@@ -224,37 +224,36 @@ a {
 a:hover {
   text-decoration: underline; }
 
-/*
-button {
-  position: relative;
-  display: inline-block;
-  padding: 7px 12px;
-  font-size: 13px;
-  font-weight: bold;
-  color: $darkGrey;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.9);
-  white-space: nowrap;
-  background-color: $lightBlue;
-  @include gradient(lighten($cream, 20%), $cream);
-  background-repeat: repeat-x;
+.stat {
+  display: inline;
+  list-style: none;
+  font-size: 12px;
+  color: #666;
+  padding: 1%;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #d5d5d5;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-appearance: none;
-  transition: color 0.1s ease-in;
-  -webkit-transition: color 0.1s ease-in 0;
-}
-button:hover {
-  color: $red;
-}
-*/
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  text-align: center; }
+  .stat em {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-style: normal; }
+
+.avatar {
+  text-align: center; }
+  .avatar.avatar-small {
+    width: 50px; }
+    .avatar.avatar-small img {
+      width: 40px;
+      height: 40px; }
+    .avatar.avatar-small figcaption {
+      font-size: 10px;
+      overflow: hidden; }
+  .avatar img {
+    border: 1px solid #f24c27; }
+
 @inlcude mixins;
 .container {
   width: 100%;
@@ -265,10 +264,14 @@ button:hover {
 
 #main {
   background: #FFF;
-  padding: 20px 0;
   position: relative;
   width: 100%;
   max-width: 1440px; }
+
+#river-deck {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
 
 #page-footer {
   min-height: 100px; }
@@ -277,6 +280,95 @@ button:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.hide {
+  display: none; }
+
+form label {
+  margin: 0 0 15px 0;
+  display: block; }
+  form label span {
+    color: #FFF;
+    display: block;
+    margin: 0 0 2px 0; }
+    form label span a {
+      float: right;
+      display: block;
+      font-size: 12px; }
+form input, form textarea {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  padding: 5px;
+  border: 0; }
+form .col-1 {
+  width: 45%;
+  margin: 0 5% 0 0;
+  float: left; }
+form .col-2 {
+  width: 45%;
+  float: left; }
+form .actions {
+  clear: both;
+  text-align: right; }
+form button {
+  color: #FFF; }
+  form button.btn-secondary {
+    color: #999; }
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #404040;
+  white-space: nowrap;
+  border-radius: 3px;
+  border: 1px solid #d5d5d5;
+  vertical-align: middle;
+  background: transparent;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in 0; }
+  button:before {
+    padding-right: 5px; }
+
+button:hover {
+  color: #f24c27; }
+
+.icon-link {
+  color: #666;
+  cursor: pointer; }
+  .icon-link:hover {
+    color: #f24c27;
+    text-decoration: none; }
+
+.btn-icon {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 9px;
+  background: transparent;
+  width: 100%;
+  height: 50px; }
+  .btn-icon:before {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: #f24c27; }
+  .btn-icon.current:before {
+    color: #666; }
 
 @font-face {
   font-family: 'icomoon';
@@ -421,7 +513,7 @@ button:hover {
 .river-card {
   border: 1px solid #666;
   width: 21%;
-  margin: 2%;
+  margin: 1%;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-background-clip: padding-box;
@@ -450,11 +542,7 @@ button:hover {
   padding: 5% 0 1% 0;
   font-size: 16px; }
   .river-card-title a {
-    color: #666;
     visibility: hidden; }
-    .river-card-title a:hover {
-      color: #f24c27;
-      text-decoration: none; }
   .river-card:hover .river-card-title a {
     visibility: visible; }
   .river-card-title .btn-view-more {
@@ -466,19 +554,6 @@ button:hover {
 .user-stats, .river-stats {
   margin: 0;
   padding: 0; }
-
-.stat {
-  display: inline;
-  list-style: none;
-  font-size: 12px;
-  color: #666;
-  padding: 1%;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  text-align: center; }
 
 .user-stats {
   float: left;
@@ -493,8 +568,29 @@ button:hover {
   .river-stats .stat:last-child:after {
     content: ""; }
 
+.river-card-current-flow {
+  display: none; }
+
+.river-card-content-container {
+  height: 280px;
+  overflow: auto; }
+
 .river-card-content {
-  min-height: 200px; }
+  display: none; }
+
+.river-card[data-view="log"] .river-card-content[data-view="log"] {
+  display: block; }
+.river-card[data-view="info"] .river-card-content[data-view="info"] {
+  display: block; }
+.river-card[data-view="flows"] .river-card-content[data-view="flows"] {
+  display: block; }
+.river-card[data-view="notes"] .river-card-content[data-view="notes"] {
+  display: block; }
+.river-card[data-view="log"] .river-card-content-container, .river-card[data-view="activity"] .river-card-content-container, .river-card[data-view="flows"] .river-card-content-container {
+  height: 240px; }
+.river-card[data-view="log"] .river-card-current-flow, .river-card[data-view="activity"] .river-card-current-flow, .river-card[data-view="flows"] .river-card-current-flow {
+  height: 40px;
+  display: block; }
 
 .river-card-footer {
   border-top: 1px solid #999;
@@ -510,19 +606,144 @@ button:hover {
   padding: 0;
   width: 33.3%; }
 
-.btn-icon {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-size: 9px;
-  background: transparent;
+.river-card-content {
+  padding: 0 5%; }
+
+.river-card-log-entries {
+  margin: 5% 0;
   width: 100%;
-  height: 50px; }
-  .btn-icon:before {
+  font-size: 12px; }
+  .river-card-log-entries thead th {
+    border: 1px solid #EEE;
+    padding: 2%; }
+    .river-card-log-entries thead th.log-year {
+      background: #EEE; }
+  .river-card-log-entries tbody td {
+    border: 1px solid #EEE;
+    padding: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .river-card-log-entries tbody td .stat {
+      display: inline-block; }
+    .river-card-log-entries tbody td.notes {
+      max-width: 120px; }
+  .river-card-log-entries .date-cell {
+    position: relative; }
+  .river-card-log-entries .log-actions {
+    display: none; }
+    .river-card-log-entries .log-actions:hover a {
+      color: #f24c27; }
+  .river-card-log-entries tr:hover .log-actions {
     display: block;
-    font-size: 18px;
-    margin-bottom: 4px;
-    color: #f24c27; }
-  .btn-icon.current:before {
-    color: #666; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); }
+
+.river-card-content[data-view="notes"] {
+  margin: 5% 0; }
+
+.river-card-note-list {
+  margin: 5% 0;
+  padding: 0; }
+
+.river-card-note {
+  margin: 2% 0;
+  padding: 0 0 0 60px;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid #EEE; }
+  .river-card-note .avatar {
+    position: absolute;
+    left: 5px;
+    top: 0; }
+  .river-card-note h4, .river-card-note h5 {
+    margin: 1% 0; }
+  .river-card-note h4 {
+    font-size: 14px; }
+  .river-card-note p {
+    font-size: 12px; }
+  .river-card-note .note-actions {
+    display: none; }
+    .river-card-note .note-actions a:hover {
+      color: #f24c27; }
+  .river-card-note:hover .note-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: rgba(255, 255, 255, 0.8); }
+    .river-card-note:hover .note-actions a {
+      display: block;
+      margin: 0 0 8px 0; }
+
+.river-card-info-list {
+  overflow: auto;
+  margin: 5% 0;
+  padding: 0;
+  border: solid #999;
+  border-width: 1px 0 0 0;
+  display: flex;
+  flex-flow: row wrap; }
+  .river-card-info-list .stat {
+    margin: 0;
+    padding: 4% 8%;
+    list-style: none;
+    float: left;
+    width: 50%;
+    background: #FAFAFA;
+    text-align: left;
+    border: solid #999;
+    color: #999;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .river-card-info-list .stat:nth-child(even) {
+      border-width: 0 1px 1px 1px; }
+    .river-card-info-list .stat:nth-child(odd) {
+      border-width: 0 0 1px 1px; }
+    .river-card-info-list .stat h5 {
+      margin: 1% 0; }
+    .river-card-info-list .stat em {
+      color: #555; }
+    .river-card-info-list .stat .stat-value {
+      display: block;
+      margin: 1% 0; }
+
+.river-card-flows {
+  margin: 5% 0;
+  width: 100%; }
+
+.river-card-flow-graph {
+  width: 90%;
+  height: 200px; }
+
+#log-entry {
+  background: #444;
+  box-shadow: inset 0px 0px 32px 0px rgba(0, 0, 0, 0.5);
+  padding: 50px 100px; }
+  #log-entry .col-1 {
+    width: 30%; }
+  #log-entry .col-2 {
+    width: 65%; }
+  #log-entry .log-trips input {
+    width: 40px; }
+  #log-entry .log-flow input {
+    width: 80px; }
+  #log-entry .log-run input {
+    width: 100%; }
+  #log-entry .log-notes textarea {
+    width: 100%;
+    height: 50px; }
+  #log-entry .log-friends input {
+    width: 100%; }
+
+#run-form {
+  background: #444;
+  box-shadow: inset 0px 0px 32px 0px rgba(0, 0, 0, 0.5);
+  padding: 50px 100px; }

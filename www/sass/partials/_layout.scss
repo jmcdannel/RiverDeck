@@ -10,10 +10,15 @@
 
 #main {
   background: #FFF;
-  padding: 20px 0;
   position: relative;
   width: 100%;
   max-width: 1440px;
+}
+
+#river-deck {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 #page-footer {
@@ -22,4 +27,8 @@
 
 *, *:after, *:before {
   @include box-sizing;
+}
+
+.hide {
+  display: none;
 }

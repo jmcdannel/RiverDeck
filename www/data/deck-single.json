@@ -1,4 +1,5 @@
-{
+[{
+    "view" : "log",
     "river": {
         "name": "Main Payette",
         "stats": {
@@ -22,7 +23,7 @@
                 "lng": "0"
             },
             "takeout": {
-                "name": "Banks",
+                "name": "Beehive",
                 "directions": "",
                 "lat": "0",
                 "lng": "0"
@@ -34,10 +35,23 @@
             "graph": "",
             "flowStatus": "medium",
             "datetime" : "9/10/14 12:00pm"
+        },
+        "levels" : {
+          "low" : [500, 4000],
+          "medium" : [4000, 8000],
+          "high" : [8000, 2500]
         }
     },
     "userData": {
-        "log": [],
+        "log": [
+          { "date" : "8/1", "notes" : " R5 with Ryan, Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R5 with Ryan, Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R4 with Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R3 with Ryan, Ben. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : "", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : " R5 with Ryan, Ben, Ted, Jerry. Rescued a paddle boat.", "runningTotals" : { "miles" : 192, "feet" : 1001 } },
+          { "date" : "8/1", "notes" : "", "runningTotals" : { "miles" : 192, "feet" : 1001 } }
+        ],
         "currentYearTotal": "8",
         "allTimeTotal": "124",
         "photos": [],
@@ -71,7 +85,7 @@
         "notes": [
             {
                 "author": {
-                  "name" : "River Deck",
+                  "name" : "RiverDeck",
                   "id" : "rd",
                   "type" : "system",
                   "avatar" : "http://lorempixel.com/output/people-q-c-80-80-3.jpg"
@@ -107,22 +121,19 @@
     "actions": [
         {
             "label": "Log",
-            "subActions": [
-                "Add",
-                "Last"
-            ]
+            "icon": "quill",
+            "name" : "log",
+            "current" : true
         },
         {
-            "label": "Pics & Vids",
-            "subactions": [
-                "Add"
-            ]
+            "label": "Flows",
+            "name" : "flows",
+            "icon": "stats"
         },
         {
-            "label": "Info"
-        },
-        {
-            "label": "Notes (3)"
+            "label": "Notes (3)",
+            "name" : "notes",
+            "icon": "file"
         }
     ]
-}
+}]

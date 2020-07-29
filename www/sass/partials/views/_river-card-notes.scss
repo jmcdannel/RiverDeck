@@ -1,0 +1,51 @@
+
+.river-card-content[data-view="notes"] {
+  margin: 5% 0;
+}
+
+.river-card-note-list {
+  margin: 5% 0;
+  padding: 0;
+}
+.river-card-note {
+  margin: 2% 0;
+  padding: 0 0 0 60px;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+
+  .avatar {
+    position: absolute;
+    left: 5px;
+    top: 0;
+
+  }
+
+  h4, h5 { margin: 1% 0; }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .note-actions {
+    display: none;
+    a:hover {
+      color: $red;
+    }
+  }
+
+  &:hover .note-actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: rgba(255,255,255,.8);
+    a {
+      display: block;
+      margin: 0 0 8px 0;
+    }
+  }
+
+}

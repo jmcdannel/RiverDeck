@@ -5,10 +5,12 @@ requirejs.config({
       jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min',
       lodash: '../lib/lodash',
       backbone: '../lib/backbone',
+      chart: '../lib/Chart',
+      moment: '../lib/moment',
       handlebars: '../lib/handlebars.runtime',
       templates : 'compiled-templates'
     },
-    
+
     shim: {
         // Libraries
         jquery: {
